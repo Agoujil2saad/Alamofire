@@ -764,7 +764,7 @@ extension DownloadRequest {
 /// A `ResponseSerializer` that decodes the response data using `JSONSerialization`. By default, a request returning
 /// `nil` or no data is considered an error. However, if the request has an `HTTPMethod` or the response has an
 /// HTTP status code valid for empty responses, then an `NSNull` value is returned.
-@available(*, deprecated, message: "JSONResponseSerializer deprecated and will be removed in Alamofire 6. Use DecodableResponseSerializer instead.")
+//@available(*, deprecated, message: "JSONResponseSerializer deprecated and will be removed in Alamofire 6. Use DecodableResponseSerializer instead.")
 public final class JSONResponseSerializer: ResponseSerializer {
     public let dataPreprocessor: DataPreprocessor
     public let emptyResponseCodes: Set<Int>
@@ -826,7 +826,7 @@ extension DataRequest {
     ///   - completionHandler:   A closure to be executed once the request has finished.
     ///
     /// - Returns:               The request.
-    @available(*, deprecated, message: "responseJSON deprecated and will be removed in Alamofire 6. Use responseDecodable instead.")
+//    @available(*, deprecated, message: "responseJSON deprecated and will be removed in Alamofire 6. Use responseDecodable instead.")
     @discardableResult
     public func responseJSON(queue: DispatchQueue = .main,
                              dataPreprocessor: DataPreprocessor = JSONResponseSerializer.defaultDataPreprocessor,
